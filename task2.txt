@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        boolean check = true;
+        while(check) {
+            System.out.println("1.Add");
+            System.out.println("2.Subtract");
+            System.out.println("3.Multiply");
+            System.out.println("4.Divide");
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("emeliyyat daxil edin");
+            int cal = scanner.nextInt();
+            System.out.println("1-ci reqemi daxil edin");
+            int number1 = scanner.nextInt();
+            System.out.println("2-ci reqemi daxil edin");
+            int number2 = scanner.nextInt();
+
+
+
+    switch (cal) {
+        case 1:add(number1,number2);
+
+            break;
+        case 2:
+            subtract(number1,number2);
+            break;
+        case 3:
+            multiply(number1,number2);
+            break;
+        case 4:
+            divide(number1,number2);
+            break;
+
+        default:
+            System.out.println("invalid");
+            break;
+
+    }
+
+    System.out.println("davam etmek isteyirsiniz?");
+    System.out.println("davam etmek ucun 1, dayandirmaq ucun 2 yazin");
+    int choose1 = scanner.nextInt();
+
+    if (choose1==1){
+        check = true;
+    }else if(choose1==2){
+        check = false;
+    }
+}
+
+
+    }
+
+    public  static  void add( int number1,int number2){
+       int result = number1+number2;
+        System.out.println(result);
+    }
+
+    public  static  void subtract( int number1,int number2){
+        int result = number1-number2;
+        System.out.println(result);
+    }
+
+    public  static  void multiply( int number1,int number2){
+        int result = number1*number2;
+        System.out.println(result);
+    }
+
+    public  static  void divide( int number1,int number2){
+        int result = number1/number2;
+        System.out.println(result);
+    }
+
+
+
+}
